@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fff;
+    color: #222;
+}
+
+/* Header  */
+.wolf_notes_header {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #a8d5a2;
+    padding: 15px 20px; 
+    width: 100%;
+}
+
+.wolf_notes_header h1 {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    padding: 20px;
+}
+
+.wolf_notes_header .home-logo {
+    position: absolute;
+    left: 20px; 
+}
+
+.wolf_notes_header .home-logo img {
+    height: 40px; 
+    cursor: pointer;
+}
+
+.wolf_notes_header .header-right {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    gap: 15px; 
+}
+
+.wolf_notes_header .header-right .icon {
+    height: 40px; 
+    cursor: pointer;
+}
+
+.wolf_notes_header .header-right .icon:hover {
+    opacity: 0.7;
+}
+
+/* Main content */
+main {
+    padding: 30px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Profile section */
+#profile-info {
+    margin-bottom: 40px;
+}
+
+#profile-info h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.profile-card {
+    background: #dbeee9;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 600px;
+}
+
+#profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #a3d6c4;
+}
+
+.save-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #a3d6c4;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    align-self: flex-start;
+}
+
+.save-btn:hover {
+    background: #89cbb4;
+}
+
+.save-btn:active {
+    background: #70b89f;
+}
+
+/* Classes section */
+#instructor-classes h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#classes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Class card */
+.class-card {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s;
+}
+
+.class-card:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.class-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.class-header h3 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+.archive-btn {
+    background: #a3d6c4;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+
+/* Class details */
+.class-details {
+    margin-bottom: 15px;
+}
+
+.class-details p {
+    margin: 2px 0;
+    font-size: 0.9em;
+    color: #444;
+}
+
+/* Students section */
+.students-section {
+    margin-top: 15px;
+}
+
+.students-header {
+    background: rgba(163, 214, 196, 0.3);
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.students-header:hover {
+    background: rgba(163, 214, 196, 0.5);
+}
+
+.dropdown-icon {
+    font-size: 0.8rem;
+}
+
+.students-list {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+
+.student-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    margin: 5px 0;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.student-item span {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.unenroll-btn {
+    background: #a3d6c4;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.unenroll-btn:hover {
+    background: #a3d6c4;
+}
+
+.unenroll-btn:active {
+    background: #a3d6c4;
+}
+
+.no-students {
+    text-align: center;
+    color: #666;
+    padding: 10px;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.empty-message {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 20px 15px;
+    }
+    
+    .profile-card {
+        padding: 20px;
+    }
+    
+    .class-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .student-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .unenroll-btn {
+        align-self: flex-end;
+    }
+}

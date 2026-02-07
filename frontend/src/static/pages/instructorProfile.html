@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WolfNotes - Instructor Profile</title>
+    <link rel="stylesheet" href="/css/instructorProfile.css">
+    <link rel="icon" type="image/png" href="../images/icons/notes-icon.png">
+    <meta name="theme-color" content="#a8d5a2">
+    <link rel="apple-touch-icon" sizes="128x128" href="../images/icons/icon-128.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="../images/icons/icon-256.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="../images/icons/icon-512.png">
+    <script src="../js/authCheck.js" defer></script>
+    <script type="module" src="/js/offlineHandler.js"></script>
+    <script type="module" src="/js/instructorProfile.js"></script>
+</head>
+<body>
+    <header class="wolf_notes_header">
+        <a href="/student/home" class="home-logo">
+            <img src="../images/home_logo.png" alt="Home Logo">
+        </a>
+        <h1>WolfNotes</h1>
+        <div class="header-right">
+            <img src="../images/user.png" alt="Profile Icon" class="icon">
+            <img src="../images/logout_icon.png" alt="Logout Icon" class="icon">
+        </div>
+    </header>
+
+    <main>
+        <section id="profile-info">
+            <h2>Profile Information</h2>
+            <div class="profile-card">
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="institution">Institution</label>
+                        <input type="text" id="institution" name="institution" placeholder="Optional">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Optional">
+                    </div>
+                    <button type="submit" class="save-btn">Save Profile</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="instructor-classes">
+            <h2>My Classes</h2>
+            <div id="classes-list">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
