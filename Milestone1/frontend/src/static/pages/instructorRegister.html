@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instructor Register</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="../js/instructorRegister.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>WolfNotes</h1>
+    </header>
+
+    <h1>Instructor Registration</h1>
+
+    <form action="/api/auth/register" method="POST" novalidate>
+        <input type="hidden" name="role" value="instructor">
+        <div class="formPair">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="formPair">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="formPair">
+            <label for="subject">Subject Taught</label>
+            <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="formPair">
+            <label for="institution">Institution Name</label>
+            <input type="text" id="institution" name="institution" required>
+        </div>
+        <div class="formPair">
+            <label for="password">Create Password *</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="formPair">
+            <label for="passwordVerification">Confirm Password *</label>
+            <input type="password" id="passwordVerification" name="passwordVerification" required>
+        </div>
+        <button id="instructorRegisterBtn" type="submit">Register</button>
+    </form>
+</body>
+</html>

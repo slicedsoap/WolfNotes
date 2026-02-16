@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href ="../css/classView.css">
+  <link rel="icon" type="image/png" href="../images/icons/notes-icon.png">
+  <meta name="theme-color" content="#a8d5a2">
+  <link rel="apple-touch-icon" sizes="128x128" href="../images/icons/icon-128.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="../images/icons/icon-256.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="../images/icons/icon-512.png">
+  <script type="module" src="../js/classView.js" defer></script>
+  <script type="module" src="../js/offlineHandler.js" defer></script>
+  <script src="../js/authCheck.js" defer></script>
+  <title>Wolf Notes</title>
+</head>
+
+<body>
+  <header class="wolf_notes_header">
+    <a href="/student/home" class="home-logo">
+        <img src="../images/home_logo.png" alt="Home Logo">
+    </a>
+    <h1>WolfNotes</h1>
+    <div class="header-right">
+        <img src="../images/user.png" alt="Profile Icon" class="icon">
+        <img src="../images/logout_icon.png" alt="Logout Icon" class="icon">
+    </div>
+  </header>
+
+  <div id="inner-body">
+    <div id="title-and-upload">
+        <template id="class-name"></template>
+        <button id="upload-notes-button">Post New Note</button>
+    </div>
+
+    <input id="search-notes" type="text" placeholder="Search..."></input>
+    
+    <div id="note-list"> <!--For displaying a list of student uploaded notes-->
+        
+    </div>
+    <template id="class-notes" class="one-note">
+      <div class="one-note-in-list">
+          <h3 class="note-title"></h3> <!--The title of the note-->
+          <p class="note-author"></p>  <!--The note's user-->
+          <p class="note-date"></p>  <!--The date the note was posted-->
+          <!-- <img src="../images/like.png" alt="Like button" class="like-btn"> The like button -->
+      </div>
+    </template>
+
+
+    <div id="note-to-display">
+        <div class="one-note-in-detail hidden">
+            <h1 class="note-title"></h1> <!--The title of the note-->
+            <p class="note-desc"></p>  <!--A description of the note-->
+            <p class="note-author"></p>  <!--The note's user-->
+            <p class="note-date"></p>  <!--The date the note was posted-->
+            <div class="like-section">
+                <img src="../images/like.png" alt="Like button" class="like-btn">
+                <p class="upvote-count"></p>
+            </div>
+            <!-- <img src="../images/like.png" alt="Like button" class="like-btn"> 
+            <p class="upvote-count"></p> -->
+            <button class="download-button">Download PDF</button>
+            <template id="comments">
+                <input></input>
+                <button>Post</button> <!--Do a reply thread-->
+            </template>
+        </div>
+        
+    </div>
+
+    <div id="note-creation" class="hidden">
+        <form id="create-new-note" enctype="multipart/form-data">
+            <label>Note Title</label>
+            <input type="text" id="create-note-title" name="title">
+
+            <label>Upload PDF</label>
+            <input type="file" id="create-note-file" name="pdf" accept="application/pdf">
+
+            <button type="submit">Upload Note</button>
+        </form>
+    </div>
+
+ </div>
+</body>

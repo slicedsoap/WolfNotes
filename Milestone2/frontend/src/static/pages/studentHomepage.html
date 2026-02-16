@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/studentHomepage.css">
+  <link rel="icon" type="image/png" href="../images/icons/notes-icon.png">
+  <meta name="theme-color" content="#a8d5a2">
+  <link rel="apple-touch-icon" sizes="128x128" href="../images/icons/icon-128.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="../images/icons/icon-256.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="../images/icons/icon-512.png">
+  <script src="../js/authCheck.js" defer></script>
+  <script type="module" src="../js/student_homepage.js" defer></script>
+  <script type="module" src="../js/dbHelper.js" defer></script>
+  <script type="module" src="../js/offlineHandler.js" defer></script>
+  <title>Wolf Notes</title>
+</head>
+
+<body>
+      <header class="wolf_notes_header">
+        <a href="/student/home" class="home-logo">
+            <img src="../images/home_logo.png" alt="Home Logo">
+        </a>
+        <h1>WolfNotes</h1>
+        <div class="header-right">
+            <img src="../images/user.png" alt="Profile Icon" class="icon">
+            <img src="../images/logout_icon.png" alt="Logout Icon" class="icon">
+        </div>
+  </header>
+
+  <main>
+    <div id="enrolled-courses">
+      <h2>Enrolled Courses</h2>
+      <div id="course-list" class="card">
+      </div>
+    </div>
+
+    <div id="join-course">
+      <h2>Join a Course</h2>
+      <div class="card">
+        <input id="join" type="text" placeholder="Enter a class code..."></input>
+        <button id="enroll-button">Enroll</button>
+      </div>
+    </div>
+
+    <div id="archived-courses">
+      <h2>Archived Courses</2>
+      <div class="card">
+        <p>khfkjh</p>
+      </div>
+    </div>
+
+
+    <div id="my-notes">
+      <div class="card">
+        <h2>My Notes</h2>
+        <button id="myNotesBtn">My Notes</button>
+      </div>
+    </div>
+  </main>
+
+</body>

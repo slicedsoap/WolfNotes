@@ -1,0 +1,228 @@
+/* Header */
+.wolf_notes_header {
+  grid-area: head;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #a8d5a2;
+  padding: 15px 20px; 
+  width: 100%;     
+}
+
+.wolf_notes_header h1 {
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0 10px;
+  flex: 1;
+  text-align: center;
+}
+
+.wolf_notes_header .home-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.wolf_notes_header .home-logo img {
+  height: 40px; 
+  cursor: pointer;
+}
+
+.wolf_notes_header .header-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.wolf_notes_header .header-right .icon {
+  height: 40px; 
+  cursor: pointer;
+}
+
+/* Main container - centered with max width */
+main {
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 10px 20px;
+}
+
+/* All notes container - responsive grid */
+#note-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Each note box */
+.note-item {
+  background: rgb(141, 38, 38); 
+  color: #fff;
+  padding: 15px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  min-height: 200px;
+}
+
+.note-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.note-item:nth-child(odd) {
+  background: rgb(141, 38, 38);
+  color: #fff;
+}
+
+.note-item:nth-child(even) {
+  background: rgb(213, 213, 213);
+  color: #000;
+}
+
+/* Note content styling */
+.note-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+}
+
+.note-class {
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.note-date {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: auto;
+}
+
+#filter-by-class {
+  background: #d6d6d6;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 7px;
+  border: none;
+}
+
+.empty-message {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  padding: 40px;
+  grid-column: 1 / -1;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  #note-box {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    padding: 15px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .wolf_notes_header {
+    padding: 12px 15px;
+    gap: 8px;
+  }
+
+  .wolf_notes_header h1 {
+    font-size: 1.5rem;
+    padding: 0 5px;
+  }
+
+  .wolf_notes_header .home-logo img {
+    height: 32px;
+  }
+
+  .wolf_notes_header .header-right {
+    gap: 10px;
+  }
+
+  .wolf_notes_header .header-right .icon {
+    height: 32px;
+  }
+
+  main {
+    margin: 10px auto;
+    padding: 5px 10px;
+  }
+
+  #note-box {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .note-item {
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wolf_notes_header {
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .wolf_notes_header h1 {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+
+  .wolf_notes_header .home-logo img {
+    height: 28px;
+  }
+
+  .wolf_notes_header .header-right {
+    gap: 8px;
+  }
+
+  .wolf_notes_header .header-right .icon {
+    height: 28px;
+  }
+
+  main {
+    margin: 5px auto;
+    padding: 5px;
+  }
+
+  #note-box {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .note-item {
+    padding: 12px;
+    min-height: 140px;
+  }
+
+  .note-title {
+    font-size: 1rem;
+  }
+
+  .note-class {
+    font-size: 0.85rem;
+  }
+
+  .note-date {
+    font-size: 0.8rem;
+  }
+}
